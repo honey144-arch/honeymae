@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap');
+
+:root {
+  /* "Boba Pop" palette — flat, playful, light. Deliberately the opposite
+     of a dark glassmorphism look: solid cream cards, thick outlines,
+     hard offset shadows instead of blur. */
+  --cream: #fff3e2;
+  --cream-card: #fffaf1;
+  --outline: #3b2417;
+
+  --tea-300: #d9b48f;
+  --tea-500: #a8683f;
+  --tea-700: #6b3f26;
+
+  --taro-500: #8c6bae;
+  --taro-400: #a98cc4;
+
+  --honey-500: #f2a541;
+  --honey-400: #f7c26b;
+
+  --surface-glass: var(--cream-card);
+  --surface-border: rgba(59, 36, 23, 0.18);
+
+  --text-onlight: #3b2417;
+  --text-onglass: #3b2417;
+  --text-muted: rgba(59, 36, 23, 0.62);
+
+  --danger: #d1495b;
+  --success: #3d9970;
+
+  --radius-lg: 26px;
+  --radius-md: 16px;
+  --shadow-glass: 7px 7px 0 var(--outline);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: var(--text-onlight);
+}
+
+h1, h2, h3, .primary-button, .login-submit {
+  font-family: 'Baloo 2', 'Segoe UI', sans-serif;
+}
+
+.app-background {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  background-color: var(--cream);
+  background-image:
+    radial-gradient(rgba(139, 94, 60, 0.16) 3px, transparent 3px),
+    radial-gradient(rgba(139, 94, 60, 0.16) 3px, transparent 3px);
+  background-size: 44px 44px;
+  background-position: 0 0, 22px 22px;
+}
+
+.glass-panel {
+  position: relative;
+  z-index: 1;
+  background: var(--surface-glass);
+  border: 3px solid var(--outline);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-glass);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
